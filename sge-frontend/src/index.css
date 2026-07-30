@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  header,
+  nav,
+  .print\\:hidden {
+    display: none !important;
+  }
+  #fichario-print {
+    width: 100%;
+  }
+  #fichario-print input {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  #freq-matriz-print {
+    width: 100%;
+  }
+}

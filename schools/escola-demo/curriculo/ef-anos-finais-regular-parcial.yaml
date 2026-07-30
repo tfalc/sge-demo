@@ -1,0 +1,52 @@
+# Referencia: Res. SEEDUC 4746/2011 Anexo II — 25 aulas/semana x 50 min
+id: ef-af-regular-parcial
+nome: EF Anos Finais — Regular Parcial
+etapa: ANOS_FINAIS
+modalidade: REGULAR_PARCIAL
+aulas_semanais_total: 25
+minutos_aula: 50
+horas_anuais_minimas: 800
+normativa_ref: "Res. SEEDUC 4746/2011 Anexo II"
+serie_nomes:
+  - "6 Ano"
+  - "7 Ano"
+  - "8 Ano"
+  - "9 Ano"
+
+componentes:
+  - componente: Lingua Portuguesa
+    area: Linguagens
+    aulas_semanais: 5
+    base_nacional_comum: true
+  - componente: Matematica
+    area: Matematica
+    aulas_semanais: 5
+    base_nacional_comum: true
+  - componente: Historia
+    area: Ciencias Humanas
+    aulas_semanais: 3
+    base_nacional_comum: true
+  - componente: Geografia
+    area: Ciencias Humanas
+    aulas_semanais: 3
+    base_nacional_comum: true
+  - componente: Ciencias
+    area: Ciencias da Natureza
+    aulas_semanais: 4
+    base_nacional_comum: true
+  - componente: Educacao Fisica
+    area: Linguagens
+    aulas_semanais: 2
+    base_nacional_comum: true
+  - componente: Arte
+    area: Linguagens
+    aulas_semanais: 2
+    base_nacional_comum: true
+  - componente: Lingua Inglesa
+    area: Linguagens
+    aulas_semanais: 2
+    base_nacional_comum: true
+  - componente: Ensino Religioso
+    area: Parte Diversificada
+    aulas_semanais: 1
+    base_nacional_comum: false

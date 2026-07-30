@@ -1,0 +1,24 @@
+{
+  "name": "SGE - Sistema de Gestao Escolar",
+  "short_name": "SGE",
+  "description": "Gestao escolar: financeiro, academico, comunicacao e saude.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#0c2d57",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

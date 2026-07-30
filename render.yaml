@@ -1,0 +1,50 @@
+# Exported from Blueprint — ajuste nomes/URLs após o 1º deploy se necessário.
+# Postgres: use o banco já criado (sge-demo-db) e vincule em Environment → DATABASE_URL.
+# Se preferir Blueprint criar o banco, descomente a seção databases.
+
+databases:
+  - name: sge-demo-db
+    plan: free
+    region: oregon
+    postgresMajorVersion: "16"
+
+services:
+  - type: web
+    name: sge-api
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./sge-backend/Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sge-demo-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SCHOOL_PACKAGE_ID
+        value: escola-demo
+      - key: APP_CORS_ALLOWED_ORIGIN_PATTERNS
+        # Atualize com a URL exata do Static Site se o wildcard não bastar
+        value: https://*.onrender.com,http://localhost:*
+
+  - type: web
+    name: sge-demo
+    runtime: static
+    plan: free
+    region: oregon
+    rootDir: sge-frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_DEMO_BUILD
+        value: "true"
+      - key: VITE_API_BASE_URL
+        # Defina após o 1º deploy da API, ex.: https://sge-api.onrender.com (sem barra final)
+        sync: false

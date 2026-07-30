@@ -1,0 +1,29 @@
+.DS_Store
+Thumbs.db
+
+# Java / Maven
+sge-backend/target/
+sge-backend/.tools/
+sge-launcher/target/
+
+# Node / Vite
+sge-frontend/node_modules/
+sge-frontend/dist/
+
+# Logs
+*.log
+
+# Pacote portatil gerado (scripts/build-portable.ps1)
+dist-portable/
+build/jpackage-input/
+
+# Auxiliar local (nao faz parte do produto) + screenshots de demo
+_auxiliar/
+demo-screenshots/
+
+# Pacotes de escolas reais (nunca publicar no remoto da demo)
+schools/_private/
+
+# IDE / Cursor
+.cursor/
+.idea/

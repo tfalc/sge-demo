@@ -1,0 +1,72 @@
+server:
+  port: 8080
+
+spring:
+  autoconfigure:
+    exclude:
+      # MVP: ainda nao usamos Redis/RabbitMQ no codigo; evita exigir servicos rodando localmente
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+      - org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/sge}
+    username: ${SPRING_DATASOURCE_USERNAME:sge}
+    password: ${SPRING_DATASOURCE_PASSWORD:sge123}
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+    open-in-view: false
+  redis:
+    host: ${SPRING_REDIS_HOST:localhost}
+    port: ${SPRING_REDIS_PORT:6379}
+
+app:
+  school:
+    package-id: ${SCHOOL_PACKAGE_ID:escola-demo}
+  cors:
+    # Override via APP_CORS_ALLOWED_ORIGIN_PATTERNS (vírgula) se necessário
+    allowed-origin-patterns:
+      - http://localhost:*
+      - http://127.0.0.1:*
+      - http://[::1]:*
+      - https://*.onrender.com
+  jwt:
+    secret: ${JWT_SECRET:change-this-secret-with-at-least-32-chars}
+    expiration-ms: ${JWT_EXPIRATION_MS:3600000}
+    refresh-expiration-ms: ${JWT_REFRESH_EXPIRATION_MS:604800000}
+  openpix:
+    app-id: ${OPENPIX_APP_ID:}
+    webhook-secret: ${OPENPIX_WEBHOOK_SECRET:}
+    base-url: ${OPENPIX_BASE_URL:https://api.openpix.com.br}
+  storage:
+    filesystem:
+      path: ${APP_STORAGE_PATH:./data/docs}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: when_authorized
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    # Grupo vazio "academico" existia primeiro no dropdown; abrir direto em auth (onde está o login).
+    urls-primary-name: auth
+    operationsSorter: method
+    tagsSorter: alpha
+    # Mantém o JWT no Authorize após F5 (armazenado no navegador)
+    persist-authorization: true
+  show-actuator: false

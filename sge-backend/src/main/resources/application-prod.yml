@@ -1,0 +1,15 @@
+spring:
+  config:
+    activate:
+      on-profile: prod
+  jpa:
+    hibernate:
+      ddl-auto: validate
+logging:
+  level:
+    root: INFO
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false

@@ -1,0 +1,33 @@
+# Testes de API no Cursor/VS Code
+# 1) Instale a extensão "REST Client" (autor: Huachao Mao) ou "Thunder Client"
+# 2) Com este arquivo aberto, aparece "Send Request" acima de cada requisição — clique para enviar
+# 3) Depois do login, copie data.accessToken da resposta e cole em @token abaixo
+
+@base = http://localhost:8080
+@token = COLE_AQUI_O_ACCESS_TOKEN_DO_LOGIN
+
+### Login (obter JWT) — resposta: data.accessToken
+POST {{base}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@sge.com",
+  "password": "admin123"
+}
+
+### Listar cobranças (precisa do @token acima)
+GET {{base}}/api/financeiro/cobrancas?responsavelId=00000000-0000-0000-0000-000000000001
+Authorization: Bearer {{token}}
+
+### QR Code de uma cobrança (ajuste o id se necessário)
+GET {{base}}/api/financeiro/cobrancas/30303030-3030-3030-3030-303030303030/qrcode
+Authorization: Bearer {{token}}
+
+### Webhook PIX (público — sem token)
+POST {{base}}/api/financeiro/webhook/pix
+Content-Type: application/json
+
+{
+  "correlationID": "30303030-3030-3030-3030-303030303030",
+  "status": "COMPLETED"
+}

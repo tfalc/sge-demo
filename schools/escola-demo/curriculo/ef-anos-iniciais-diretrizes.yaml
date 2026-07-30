@@ -1,0 +1,68 @@
+# Modo flexivel: areas BNCC + limites RJ (DOC 2019 / LDB 800h)
+id: ef-ai-diretrizes-rj
+nome: EF Anos Iniciais — Diretrizes RJ (flexivel)
+modo_validacao: DIRETRIZES
+etapa: ANOS_INICIAIS
+modalidade: DIRETRIZES_RJ
+aulas_semanais_total: 20
+aulas_semanais_total_min: 16
+aulas_semanais_total_max: 25
+minutos_aula: 50
+horas_anuais_minimas: 800
+normativa_ref: "DOC RJ 2019; BNCC; LDB 800h/ano — carga distribuivel"
+serie_nomes:
+  - "1 Ano"
+  - "2 Ano"
+  - "3 Ano"
+  - "4 Ano"
+  - "5 Ano"
+
+diretrizes:
+  - Componentes da BNCC presentes na grade ou nos vinculos da turma
+  - Carga semanal total entre 16 e 25 aulas (50 min) no EF anos iniciais
+  - Minimo legal de 800 horas anuais de efetivo trabalho escolar
+  - Escola privada: ajuste fino com autonomia pedagogica dentro dos limites estaduais
+
+componentes:
+  - componente: Lingua Portuguesa
+    area: Linguagens
+    aulas_semanais: 5
+    aulas_semanais_min: 4
+    aulas_semanais_max: 6
+    base_nacional_comum: true
+  - componente: Matematica
+    area: Matematica
+    aulas_semanais: 5
+    aulas_semanais_min: 4
+    aulas_semanais_max: 6
+    base_nacional_comum: true
+  - componente: Ciencias
+    area: Ciencias da Natureza
+    aulas_semanais: 3
+    aulas_semanais_min: 2
+    aulas_semanais_max: 4
+    base_nacional_comum: true
+  - componente: Historia
+    area: Ciencias Humanas
+    aulas_semanais: 2
+    aulas_semanais_min: 1
+    aulas_semanais_max: 3
+    base_nacional_comum: true
+  - componente: Geografia
+    area: Ciencias Humanas
+    aulas_semanais: 2
+    aulas_semanais_min: 1
+    aulas_semanais_max: 3
+    base_nacional_comum: true
+  - componente: Arte
+    area: Linguagens
+    aulas_semanais: 2
+    aulas_semanais_min: 1
+    aulas_semanais_max: 3
+    base_nacional_comum: true
+  - componente: Educacao Fisica
+    area: Linguagens
+    aulas_semanais: 1
+    aulas_semanais_min: 1
+    aulas_semanais_max: 2
+    base_nacional_comum: true

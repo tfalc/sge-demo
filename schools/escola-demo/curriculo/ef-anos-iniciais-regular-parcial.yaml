@@ -1,0 +1,46 @@
+# Referencia: DOC RJ + Res. SEEDUC 4746 — EF anos iniciais, regular parcial
+# Turma seed 3A (3º ano) usa esta matriz
+id: ef-ai-regular-parcial
+nome: EF Anos Iniciais — Regular Parcial
+etapa: ANOS_INICIAIS
+modalidade: REGULAR_PARCIAL
+aulas_semanais_total: 20
+minutos_aula: 50
+horas_anuais_minimas: 800
+normativa_ref: "Res. SEEDUC 4746/2011 Anexo I; DOC RJ 2019"
+serie_nomes:
+  - "1 Ano"
+  - "2 Ano"
+  - "3 Ano"
+  - "4 Ano"
+  - "5 Ano"
+
+componentes:
+  - componente: Lingua Portuguesa
+    area: Linguagens
+    aulas_semanais: 5
+    base_nacional_comum: true
+  - componente: Matematica
+    area: Matematica
+    aulas_semanais: 5
+    base_nacional_comum: true
+  - componente: Ciencias
+    area: Ciencias da Natureza
+    aulas_semanais: 3
+    base_nacional_comum: true
+  - componente: Historia
+    area: Ciencias Humanas
+    aulas_semanais: 2
+    base_nacional_comum: true
+  - componente: Geografia
+    area: Ciencias Humanas
+    aulas_semanais: 2
+    base_nacional_comum: true
+  - componente: Arte
+    area: Linguagens
+    aulas_semanais: 2
+    base_nacional_comum: true
+  - componente: Educacao Fisica
+    area: Linguagens
+    aulas_semanais: 1
+    base_nacional_comum: true

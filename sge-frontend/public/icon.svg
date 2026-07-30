@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SGE">
+  <rect width="512" height="512" rx="96" fill="#0c2d57"/>
+  <rect x="64" y="120" width="384" height="272" rx="24" fill="#1e5a8a"/>
+  <rect x="120" y="176" width="120" height="88" rx="8" fill="#ffeb3b"/>
+  <rect x="272" y="176" width="120" height="88" rx="8" fill="#7dd3fc"/>
+  <rect x="120" y="288" width="272" height="56" rx="8" fill="#fff59d"/>
+  <text x="256" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="72" font-weight="bold" fill="#ffeb3b">SGE</text>
+</svg>
