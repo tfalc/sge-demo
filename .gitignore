@@ -27,3 +27,6 @@ schools/_private/
 # IDE / Cursor
 .cursor/
 .idea/
+
+.github/workflows/
+
